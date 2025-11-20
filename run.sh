@@ -1,14 +1,16 @@
 #!/bin/bash
 #SBATCH --job-name=hpl
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
-#SBATCH --time=00:10:00
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=4
+#SBATCH --time=01:00:00
 #SBATCH --output=hpl_%j.out
+#SBATCH --partition=long
 
 module load openmpi
 module load openblas
 module load hpl
 
-HPL_BIN=./xhpl
+echo '== Slurm Tasks =='
+echo $SLURM_NTASKS
 
-srun $HPL_BIN
+mpirun -n $SLURM_NTASKS xhpl
