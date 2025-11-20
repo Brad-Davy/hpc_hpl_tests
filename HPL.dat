@@ -1,0 +1,25 @@
+HPLinpack benchmark input file
+Innovative Computing Laboratory, University of Tennessee
+1             # of problems sizes (N)
+10000         Ns
+1             # of NBs
+256           NBs
+1             # of process grids (P x Q)
+1 1           Ps Qs
+16.0          Threshold
+1             # of panel factorizations
+2             PFACTs (0=left, 1=Crout, 2=Right)
+1             # of recursive stopping criteria
+4             RBMs
+1             # of recursive panel factorizations
+2             RFACTs (0=left, 1=Crout, 2=Right)
+1             # of broadcast methods
+1             BCASTs (0=1-tree, 1=2-tree, 2=long)
+1             # of lookahead depths
+1             DEPTHs
+2             SWAP (0=bin-exch, 1=long, 2=mix)
+64            Swapping threshold
+0             L1 in L2 (0=no, 1=yes)
+0             U in L2 (0=no, 1=yes)
+1             Equilibration (0=no, 1=yes)
+8             memory alignment in double (> 0)
