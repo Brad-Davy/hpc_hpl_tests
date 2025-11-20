@@ -1,25 +1,29 @@
 HPLinpack benchmark input file
 Innovative Computing Laboratory, University of Tennessee
-1             # of problems sizes (N)
-10000         Ns
-1             # of NBs
-256           NBs
-1             # of process grids (P x Q)
-1 1           Ps Qs
-16.0          Threshold
-1             # of panel factorizations
-2             PFACTs (0=left, 1=Crout, 2=Right)
-1             # of recursive stopping criteria
-4             RBMs
-1             # of recursive panel factorizations
-2             RFACTs (0=left, 1=Crout, 2=Right)
-1             # of broadcast methods
-1             BCASTs (0=1-tree, 1=2-tree, 2=long)
-1             # of lookahead depths
-1             DEPTHs
-2             SWAP (0=bin-exch, 1=long, 2=mix)
-64            Swapping threshold
-0             L1 in L2 (0=no, 1=yes)
-0             U in L2 (0=no, 1=yes)
-1             Equilibration (0=no, 1=yes)
-8             memory alignment in double (> 0)
+HPL.out      output file name
+6            device out
+1            # of problems sizes
+20000        Ns
+1            # of NBs
+256          NBs
+0            PMAP process mapping (0=Row-, 1=Column-major)
+1            # of process grids (P x Q)
+1            Ps
+1            Qs
+16.0         threshold
+1            # of panel fact
+2            PFACT
+1            # of recursive stopping criteria
+4            NBMIN
+1            # of recursive panel fact
+2            RFACT
+1            # of broadcast
+1            BCAST
+1            # of lookahead depth
+1            DEPTH
+2            SWAP
+64           swapping threshold
+0            L1 in (0=transposed, 1=no-transposed)
+0            U  in (0=transposed, 1=no-transposed)
+1            Equilibration (0=no, 1=yes)
+8            memory alignment
